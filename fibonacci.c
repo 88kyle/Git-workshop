@@ -8,7 +8,7 @@
  *     Fibonacci(1) = 1
  * @param k = the kth fibonacci number
  * @return the exact value of the fibonacci number
- *  
+ *
  *  Recall: The fibonacci sequence looks like
  *      1, 1, 2, 3, 5, 8, 13, 21, 34
  *  Example:
@@ -17,20 +17,22 @@
  *      fibonacci(8); //21
  */
 int fibonacci(int k) {
-    //WRITE CODE HERE
-
-    return 0; // EDIT THIS
+  if (k == 0)
+    return 0;
+  else if (k == 1)
+    return 1;
+  else
+    return fibonacci(k - 1) + fibonacci(k - 2);
 }
 
-
 int main(void) {
-    int k=5;
+  int k = 5;
 
-    printf("Fibonacci at %d is %d\n", k, fibonacci(k));
-    k = 6;
-    printf("Fibonacci at %d is %d\n", k, fibonacci(k));
-    k = 7;
-    printf("Fibonacci at %d is %d\n", k, fibonacci(k));
+  printf("Fibonacci at %d is %d\n", k, fibonacci(k));
+  k = 6;
+  printf("Fibonacci at %d is %d\n", k, fibonacci(k));
+  k = 8;
+  printf("Fibonacci at %d is %d\n", k, fibonacci(k));
 
-    return 0;
+  return 0;
 }
